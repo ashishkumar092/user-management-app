@@ -9,12 +9,12 @@ body {
 /* Main Container */
 .app-container {
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 28px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 /* Title */
 h1 {
@@ -88,13 +88,11 @@ h1 {
   background: #cfd8df;
 }
 
-/* Cards Container */
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 /* Single Card */
 .user-card {
@@ -160,29 +158,30 @@ h1 {
   background: #b12222;
 }
 
-
 @media (max-width: 600px) {
 
-  /* Form box spacing */
-  .form-box {
+  .app-container {
     padding: 16px;
+    width: 100%;
+  }
+
+  .form-box {
     gap: 16px;
   }
 
-  /* Stack the inputs properly */
   .form-row {
     flex-direction: column;
     gap: 14px;
   }
 
-  /* Inputs full width */
+  /* Fix overflow */
   .form-box input {
     width: 100%;
-    min-width: 300px;
+    min-width: 0;
     box-sizing: border-box;
+    flex: 1 1 60px;
   }
 
-  /* Buttons full width & stacked */
   .form-actions {
     flex-direction: column;
     gap: 10px;
@@ -191,5 +190,9 @@ h1 {
   .form-actions button {
     width: 100%;
   }
-}
 
+  .card-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

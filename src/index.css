@@ -1,4 +1,4 @@
------ Page Container -----
+/* ----- Page Container -----
 .page {
   max-width: 900px;
   margin: 40px auto;
@@ -9,7 +9,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* ----- Form Section ----- */
+----- Form Section -----
 .user-form {
   display: flex;
   gap: 15px;
@@ -49,7 +49,7 @@
   background: #4b5563;
 }
 
-/* ----- Table Styling ----- */
+----- Table Styling -----
 table {
   width: 100%;
   border-collapse: collapse;
@@ -73,7 +73,7 @@ tbody tr:hover {
   background: #f9fafb;
 }
 
-/* ----- Buttons in Table ----- */
+----- Buttons in Table -----
 button {
   padding: 7px 14px;
   font-size: 14px;
@@ -100,4 +100,4 @@ button:nth-child(1):hover {
 
 .delete-btn:hover {
   background: #dc2626;
-}
+} */
