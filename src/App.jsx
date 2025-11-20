@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import "./App.css";
+import About from "./Components/About";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -70,8 +74,17 @@ function App() {
   };
 
   return (
+    <BrowserRouter>
     <div className="app-container">
       <h1>User CRUD App</h1>
+
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/users" element={<Users />} /> */}
+        <Route path="/about" element={<About />} />
+      </Routes>
 
       {/* Single Shared Form */}
       <div id="user-form" className="form-box">
@@ -126,6 +139,7 @@ function App() {
         ))}
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 

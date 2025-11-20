@@ -3,17 +3,11 @@ import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
-      <div className="nav-brand">MyApp</div>
+    <nav className="navbar">
+      <h2 className="logo">MyApp</h2>
 
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-      <label htmlFor="nav-toggle" className="nav-toggle-label">
-        ☰
-      </label>
-
-      <ul className="nav-menu">
+      <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/users">Users</Link></li>
         <li><Link to="/about">About</Link></li>
       </ul>
     </nav>
